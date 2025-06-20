@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корочки.есть - Личный кабинет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Личный кабинет</h1>
+            <div class="user-info">
+                <span id="current-user"></span>
+                <button id="logout-btn">Выйти</button>
+            </div>
+        </header>
+
+        <nav>
+            <button class="nav-btn active" data-target="my-applications">Мои заявки</button>
+            <button class="nav-btn" data-target="new-application">Новая заявка</button>
+        </nav>
+
+        <main>
+            <!-- Секция моих заявок -->
+            <div class="content-section" id="my-applications">
+                <h2>Мои заявки на обучение</h2>
+                <div class="applications-list" id="applications-list">
+                    <!-- Заявки будут загружаться здесь -->
+                </div>
+            </div>
+
+            <!-- Секция новой заявки -->
+            <div class="content-section hidden" id="new-application">
+                <h2>Новая заявка на обучение</h2>
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="course-name">Название курса:</label>
+                        <input type="text" id="course-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Желаемая дата начала:</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Способ оплаты:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="payment" value="cash" checked> Наличные
+                            </label>
+                            <label>
+                                <input type="radio" name="payment" value="bank"> Банковский перевод
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальное окно для отзыва -->
+    <div class="modal hidden" id="feedback-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Оставить отзыв</h3>
+            <form id="feedbackForm">
+                <input type="hidden" id="feedback-app-id">
+                <div class="form-group">
+                    <label for="feedback-text">Ваш отзыв:</label>
+                    <textarea id="feedback-text" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-rating">Оценка (1-5):</label>
+                    <input type="number" id="feedback-rating" min="1" max="5" required>
+                </div>
+                <button type="submit">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

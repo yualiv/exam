@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я буду кушац - Новое бронирование</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Я буду кушац</h1>
+            <nav>
+                <ul>
+                    <li><a href="bookings.html">Мои бронирования</a></li>
+                    <li><a href="new-booking.html">Новое бронирование</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Новое бронирование</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="bookingDate">Дата и время:</label>
+                    <input type="datetime-local" id="bookingDate" name="bookingDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guestsCount">Количество гостей:</label>
+                    <input type="number" id="guestsCount" name="guestsCount" min="1" max="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactPhone">Контактный телефон:</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required placeholder="+7(XXX)-XXX-XX-XX" pattern="\+7\(\d{3}\)-\d{3}-\d{2}-\d{2}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Особые пожелания:</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Забронировать</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>© 2024 Я буду кушац. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовозофф - Новая заявка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Грузовозофф</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Мои заявки</a></li>
+                    <li><a href="create-order.html">Новая заявка</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Новая заявка на перевозку</h2>
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="orderDate">Дата и время перевозки:</label>
+                    <input type="datetime-local" id="orderDate" name="orderDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cargoType">Тип груза:</label>
+                    <select id="cargoType" name="cargoType" required>
+                        <option value="">Выберите тип груза</option>
+                        <option value="furniture">Мебель</option>
+                        <option value="appliances">Бытовая техника</option>
+                        <option value="building">Строительные материалы</option>
+                        <option value="food">Продукты питания</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cargoWeight">Вес груза (кг):</label>
+                    <input type="number" id="cargoWeight" name="cargoWeight" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cargoDimensions">Габариты груза (Д*Ш*В, см):</label>
+                    <input type="text" id="cargoDimensions" name="cargoDimensions" placeholder="100×50×70" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fromAddress">Адрес отправления:</label>
+                    <textarea id="fromAddress" name="fromAddress" rows="2" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="toAddress">Адрес доставки:</label>
+                    <textarea id="toAddress" name="toAddress" rows="2" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>© 2024 Грузовозофф. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

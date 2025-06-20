@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовозофф - Личный кабинет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Грузовозофф</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Мои заявки</a></li>
+                    <li><a href="create-order.html">Новая заявка</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Мои заявки на перевозку</h2>
+            <div class="orders-list">
+                <div class="order-card">
+                    <h3>Заявка #12345</h3>
+                    <p><strong>Дата:</strong> 15.06.2024 14:00</p>
+                    <p><strong>Груз:</strong> Мебель (500 кг)</p>
+                    <p><strong>Откуда:</strong> Москва, ул. Ленина, 10</p>
+                    <p><strong>Куда:</strong> Санкт-Петербург, Невский пр., 25</p>
+                    <p><strong>Статус:</strong> На рассмотрении</p>
+                </div>
+                
+                <div class="order-card">
+                    <h3>Заявка #12344</h3>
+                    <p><strong>Дата:</strong> 10.06.2024 10:00</p>
+                    <p><strong>Груз:</strong> Бытовая техника (300 кг)</p>
+                    <p><strong>Откуда:</strong> Екатеринбург, ул. Малышева, 5</p>
+                    <p><strong>Куда:</strong> Казань, ул. Баумана, 15</p>
+                    <p><strong>Статус:</strong> Подтверждена</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 Грузовозофф. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

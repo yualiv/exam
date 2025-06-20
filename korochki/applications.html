@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корочки.есть - Мои заявки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="Корочки.есть" class="logo">
+            <h1>Корочки.есть</h1>
+            <nav>
+                <ul>
+                    <li><a href="applications.html">Мои заявки</a></li>
+                    <li><a href="new-application.html">Новая заявка</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Мои заявки на обучение</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="all">Все</button>
+                <button class="tab-btn" data-tab="new">Новые</button>
+                <button class="tab-btn" data-tab="in-progress">В процессе</button>
+                <button class="tab-btn" data-tab="completed">Завершенные</button>
+            </div>
+            
+            <div class="applications-list" id="applicationsList">
+                <!-- Заявки будут загружены через JavaScript -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 Корочки.есть. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовозофф - Панель администратора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Грузовозофф - Администрирование</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin.html">Все заявки</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Все заявки пользователей</h2>
+            
+            <div class="filters">
+                <label for="statusFilter">Фильтр по статусу:</label>
+                <select id="statusFilter">
+                    <option value="all">Все</option>
+                    <option value="pending">На рассмотрении</option>
+                    <option value="approved">Подтверждены</option>
+                    <option value="rejected">Отклонены</option>
+                </select>
+            </div>
+            
+            <div class="orders-list">
+                <div class="order-card admin">
+                    <h3>Заявка #12345 от Иванов Иван Иванович</h3>
+                    <p><strong>Контакт:</strong> +7(123)-456-78-90, ivanov@example.com</p>
+                    <p><strong>Дата:</strong> 15.06.2024 14:00</p>
+                    <p><strong>Груз:</strong> Мебель (500 кг), 200×100×50 см</p>
+                    <p><strong>Откуда:</strong> Москва, ул. Ленина, 10</p>
+                    <p><strong>Куда:</strong> Санкт-Петербург, Невский пр., 25</p>
+                    <p><strong>Статус:</strong> На рассмотрении</p>
+                    <div class="admin-actions">
+                        <button class="btn btn-approve">Подтвердить</button>
+                        <button class="btn btn-reject">Отклонить</button>
+                        <button class="btn btn-delete">Удалить</button>
+                    </div>
+                </div>
+                
+                <div class="order-card admin">
+                    <h3>Заявка #12344 от Петров Петр Петрович</h3>
+                    <p><strong>Контакт:</strong> +7(987)-654-32-10, petrov@example.com</p>
+                    <p><strong>Дата:</strong> 10.06.2024 10:00</p>
+                    <p><strong>Груз:</strong> Бытовая техника (300 кг), 150×80×60 см</p>
+                    <p><strong>Откуда:</strong> Екатеринбург, ул. Малышева, 5</p>
+                    <p><strong>Куда:</strong> Казань, ул. Баумана, 15</p>
+                    <p><strong>Статус:</strong> Подтверждена</p>
+                    <div class="admin-actions">
+                        <button class="btn btn-approve" disabled>Подтвердить</button>
+                        <button class="btn btn-reject">Отклонить</button>
+                        <button class="btn btn-delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 Грузовозофф. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

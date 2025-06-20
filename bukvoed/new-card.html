@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквоежка - Новая карточка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="Буквоежка" class="logo">
+            <h1>Буквоежка</h1>
+            <nav>
+                <ul>
+                    <li><a href="cards.html">Мои карточки</a></li>
+                    <li><a href="new-card.html">Новая карточка</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Новая карточка</h2>
+            <form id="cardForm" class="card-form">
+                <div class="form-group">
+                    <label for="bookAuthor">Автор книги:</label>
+                    <input type="text" id="bookAuthor" name="bookAuthor" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookTitle">Название книги:</label>
+                    <input type="text" id="bookTitle" name="bookTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Тип карточки:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="cardType" value="share" required checked>
+                            Готов поделиться
+                        </label>
+                        <label>
+                            <input type="radio" name="cardType" value="want">
+                            Хочу в свою библиотеку
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Комментарии (необязательно):</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Отправить на рассмотрение</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>© 2024 Буквоежка. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

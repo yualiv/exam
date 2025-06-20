@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корочки.есть - Панель администратора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Панель администратора</h1>
+            <div class="user-info">
+                <span>Администратор</span>
+                <button id="admin-logout-btn">Выйти</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="admin-controls">
+                <div class="filter-group">
+                    <label for="status-filter">Фильтр по статусу:</label>
+                    <select id="status-filter">
+                        <option value="all">Все</option>
+                        <option value="new">Новые</option>
+                        <option value="in-progress">Идет обучение</option>
+                        <option value="completed">Обучение завершено</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="applications-list" id="admin-applications-list">
+                <!-- Заявки будут загружаться здесь -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальное окно для изменения статуса -->
+    <div class="modal hidden" id="status-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Изменение статуса заявки</h3>
+            <form id="statusForm">
+                <input type="hidden" id="status-app-id">
+                <div class="form-group">
+                    <label for="new-status">Новый статус:</label>
+                    <select id="new-status">
+                        <option value="new">Новая</option>
+                        <option value="in-progress">Идет обучение</option>
+                        <option value="completed">Обучение завершено</option>
+                    </select>
+                </div>
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

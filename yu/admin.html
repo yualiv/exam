@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я буду кушац - Панель администратора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Я буду кушац - Администрирование</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin.html">Все бронирования</a></li>
+                    <li><a href="#" id="logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Все бронирования</h2>
+            
+            <div class="filters">
+                <label for="statusFilter">Фильтр по статусу:</label>
+                <select id="statusFilter">
+                    <option value="all">Все</option>
+                    <option value="new">Новые</option>
+                    <option value="confirmed">Подтвержденные</option>
+                    <option value="completed">Посещение состоялось</option>
+                    <option value="cancelled">Отмененные</option>
+                </select>
+            </div>
+            
+            <div class="bookings-list" id="adminBookingsList">
+                <!-- Бронирования будут загружены через JavaScript -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 Я буду кушац. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

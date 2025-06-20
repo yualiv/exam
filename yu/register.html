@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я буду кушац - Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Я буду кушац</h1>
+            <p>Система бронирования столиков</p>
+        </header>
+        
+        <main>
+            <div class="auth-form">
+                <h2>Регистрация</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="firstName">Имя:</label>
+                        <input type="text" id="firstName" name="firstName" required pattern="[А-Яа-яЁё]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Фамилия:</label>
+                        <input type="text" id="lastName" name="lastName" required pattern="[А-Яа-яЁё]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7(XXX)-XXX-XX-XX" pattern="\+7\(\d{3}\)-\d{3}-\d{2}-\d{2}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regLogin">Логин:</label>
+                        <input type="text" id="regLogin" name="regLogin" required minlength="6" pattern="[А-Яа-яЁё]+">
+                        <span class="hint">Минимум 6 символов кириллицы</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль:</label>
+                        <input type="password" id="regPassword" name="regPassword" required minlength="6">
+                        <span class="hint">Минимум 6 символов</span>
+                    </div>
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                </form>
+                <p class="login-link">Уже есть аккаунт? <a href="index.html">Войти</a></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 Я буду кушац. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
